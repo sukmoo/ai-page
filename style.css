@@ -1,0 +1,63 @@
+/* BMW M - design adapted from DESIGN-bmw-m.md */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:"BMWTypeNextLatin", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial;line-height:1.5;color:#ffffff;background:#000}
+
+/* Container and spacing */
+.container{max-width:1440px;margin:0 auto;padding:0 1rem}
+
+/* Skip link */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;margin:0;padding:.5rem;background:#fff;color:#000}
+
+/* Header / Top nav */
+.site-header{background:#000;color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1rem;height:64px}
+.logo{font-size:1.125rem;margin:0;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.main-nav a{color:var(--on-dark,#ffffff);text-decoration:none;padding:.5rem .75rem;border-radius:0;text-transform:uppercase;letter-spacing:1.5px;font-weight:400;font-size:14px}
+.main-nav a:focus,.main-nav a:hover{background:rgba(255,255,255,0.03);outline:none}
+
+/* M stripe divider */
+.m-stripe-divider{height:4px;background:linear-gradient(90deg,#0066b1 0%,#1c69d4 50%,#e22718 100%);}
+
+/* Main content spacing */
+main{padding:96px 0}
+section{padding:48px 0}
+section + section{border-top:1px solid #262626}
+
+h2{font-size:24px;margin:0 0 16px;color:#ffffff;font-weight:700;text-transform:uppercase}
+p{color:#bbbbbb}
+
+.about p{max-width:70ch}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.project-card{background:#1a1a1a;padding:24px;border-radius:0;color:#ffffff}
+.project-card h3{font-size:20px;margin:0 0 8px;font-weight:700}
+.project-card p{color:#bbbbbb;margin:0}
+
+/* Contact form */
+.contact-form{display:grid;gap:12px;max-width:640px}
+.contact-form input,.contact-form textarea{padding:12px 16px;background:#262626;border:1px solid #262626;color:#ffffff;border-radius:0;height:48px;font:inherit}
+.contact-form textarea{height:auto}
+.contact-form button{padding:0 32px;height:48px;background:transparent;color:#ffffff;border:1px solid #ffffff;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;border-radius:0}
+.contact-form button:hover{background:rgba(255,255,255,0.04)}
+
+.site-footer{padding:64px 0;text-align:center;color:#bbbbbb;background:#000}
+
+/* Typography scale */
+@media (min-width:640px){
+  h2{font-size:32px}
+  .logo{font-size:18px}
+}
+
+@media (min-width:768px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (min-width:1024px){
+  .projects-grid{grid-template-columns:repeat(3,1fr)}
+}
+
